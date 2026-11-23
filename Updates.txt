@@ -1,0 +1,8 @@
+dboryey
+	organized project structure
+	configured .h
+	added operation algorithms (sa, sb, ss, etc) (ops_ files)
+	added return mechanism (data.c, stack.c)
+	claude added small descriptions for each file purpose
+
+mitavare
