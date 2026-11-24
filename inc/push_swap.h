@@ -6,7 +6,7 @@
 /*   By: dboryey <dboryey@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 14:41:37 by dboryey           #+#    #+#             */
-/*   Updated: 2026/11/24 11:04:33 by dboryey          ###   ########.fr       */
+/*   Updated: 2026/11/24 12:24:19 by dboryey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ typedef enum s_strategy
 {
 	STRAT_NONE = 0, //STRAT_NONE is for selecting adaptive sorting
 	STRAT_SIMPLE, //For *0.00 < disorder < 0.20*
-	STRAT_MEDIUM, //For *0.20 <= disorder <= 0.60*
-	STRAT_COMPLEX, //For *0.60 < disorder <= 1.00*
+	STRAT_MEDIUM, //For *0.20 <= disorder < 0.50*
+	STRAT_COMPLEX, //For *0.50 <= disorder <= 1.00*
 	STRAT_ADAPTIVE //For when no strategy selected
 }	t_strategy;
 
@@ -46,6 +46,9 @@ typedef struct s_data
 	double		disorder; //disorder coeficient, has to be double to be more precise that float.
 	t_stats		stats; //status struct that has the ops_ and the total
 }	t_data;
+
+//analysis.c
+double	calc_disorder(t_stack *stack);
 
 //ops_swap.c
 void	sa(t_data *data);
