@@ -6,7 +6,7 @@
 /*   By: dboryey <dboryey@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 18:14:56 by dboryey           #+#    #+#             */
-/*   Updated: 2026/11/24 13:27:18 by dboryey          ###   ########.fr       */
+/*   Updated: 2026/11/24 17:39:59 by dboryey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,6 @@ int	has_value(t_stack *stack, int value)
 		stack = stack->next;
 	}
 	return (0);
-}
-
-void	validate()
-{
-	
 }
 
 /* checks.c */

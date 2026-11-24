@@ -6,7 +6,7 @@
 /*   By: dboryey <dboryey@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 18:14:55 by dboryey           #+#    #+#             */
-/*   Updated: 2026/11/24 12:24:54 by dboryey          ###   ########.fr       */
+/*   Updated: 2026/11/24 17:26:22 by dboryey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,28 @@ double	calc_disorder(t_stack *stack)
 	if (t_pairs == 0)
 		return (0.0);
 	return ((double)mistake / (double)t_pairs);
+}
+
+void	assign_index(t_stack **stack)
+{
+	t_stack	*current;
+	t_stack	*other;
+	int		index;
+
+	current = stack;
+	while (current)
+	{
+		index = 0;
+		other = stack;
+		while (other)
+		{
+			if (other->value < current->value)
+				index++;
+			other = other->next;
+		}
+		current->index = index;
+		current = current->next;
+	}
 }
 
 /* analysis.c */
