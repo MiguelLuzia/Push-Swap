@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dboryey <dboryey@student.42lisboa.com>     +#+  +:+       +#+        */
+/*   By: mitavare <mitavare@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 14:41:37 by dboryey           #+#    #+#             */
-/*   Updated: 2026/11/24 12:24:19 by dboryey          ###   ########.fr       */
+/*   Updated: 2026/11/24 12:39:26 by mitavare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define PUSH_SWAP_H
 
 # include <stdlib.h>
+# include <limits.h>
 
 typedef struct s_stack
 {
