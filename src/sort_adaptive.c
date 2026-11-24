@@ -14,4 +14,4 @@
 
 /* sort_adaptive.c */
 /* Adaptive strategy: picks the simple, medium or complex method */
-/* from the measured disorder (< 0.2, < 0.6, otherwise). */
+/* from the measured disorder (< 0.2, < 0.5, otherwise). */

@@ -31,6 +31,17 @@ void	check_dup(t_data *data)
 	}
 }
 
+int	has_value(t_stack *stack, int value)
+{
+	while (stack)
+	{
+		if (stack->value == value)
+			return (1);
+		stack = stack->next;
+	}
+	return (0);
+}
+
 void	validate()
 {
 	

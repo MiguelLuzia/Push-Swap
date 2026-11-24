@@ -32,6 +32,8 @@ double	calc_disorder(t_stack *stack)
 		}
 		stack = stack->next;
 	}
+	if (t_pairs == 0)
+		return (0.0);
 	return ((double)mistake / (double)t_pairs);
 }
 

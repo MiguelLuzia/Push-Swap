@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mitavare <mitavare@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: dboryey <dboryey@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 18:14:57 by dboryey           #+#    #+#             */
-/*   Updated: 2026/11/24 12:51:00 by mitavare         ###   ########.fr       */
+/*   Updated: 2026/11/24 14:20:13 by dboryey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,10 +75,10 @@ static int	add_token(t_stack **a, const char *token)
 
 	if (!parse_int(token, &value) || has_value(*a, value))
 		return (0);
-	node = ft_lstnew(value);
+	node = new_stack(value);
 	if (!node)
 		return (0);
-	ft_lstadd_back(a, node);
+	add_back(a, node);
 	return (1);
 }
 
@@ -102,19 +102,20 @@ static int	parse_one(t_stack **a, const char *arg)
 	return (ok);
 }
 
-int	parse_args(int argc, char **argv, t_stack **a)
+int	parse_args(int ac, char **av, t_stack **a)
 {
 	int	i;
 
-	i = 0;
+	i = 1; //acho q deve comecar em 1, porque logo a seguir tu verificas o ac[0], o nome do executavel.
 	*a = NULL;
-	while (i < argc)
+	while (i < ac)
 	{
-		if(!isflag(argv[i]) || !parse_one(argv[i], *a))
+		if (!is_flag(av[i]) && !parse_one(a, av[i]))
 		{
-			stack_free(*a);
+			stack_free(a);
 			return (0);
 		}
+		i++;
 	}
 	return (1);
 }

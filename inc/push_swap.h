@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mitavare <mitavare@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: dboryey <dboryey@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 14:41:37 by dboryey           #+#    #+#             */
-/*   Updated: 2026/11/24 12:39:26 by mitavare         ###   ########.fr       */
+/*   Updated: 2026/11/24 14:34:57 by dboryey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 # define PUSH_SWAP_H
 
 # include <stdlib.h>
+# include <unistd.h>
 # include <limits.h>
+# include "libft.h"
 
 typedef struct s_stack
 {
@@ -70,14 +72,24 @@ void	rra(t_data *data);
 void	rrb(t_data *data);
 void	rrr(t_data *data);
 
+//checks.c
+void	check_dup(t_data *data);
+int		has_value(t_stack *stack, int value);
+
+//parsing.c
+void	ft_free_split(char **tokens);
+int		parse_args(int ac, char **av, t_stack **a);
+
 //data.c
+void	data_init(t_data *data);
 void	data_free(t_data *data);
 void	exit_error(t_data *data);
 
 //stack.c
 void	stack_free(t_stack **stack);
-t_stack	*new_stack(int n);
-void	add_back(t_stack **stack, t_stack *new);
+t_stack	*new_node(int n);
+void	add_back(t_stack **head, t_stack *node);
+void	add_value(t_data *data, int n);
 size_t	stack_size(t_stack *stack);
 
 #endif
