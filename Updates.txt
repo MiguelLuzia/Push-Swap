@@ -5,6 +5,9 @@ dboryey
 	added return mechanism (data.c, stack.c)
 	claude added small descriptions for each file purpose
 	Added stack utils: new stack, stack count, add back.
+	Added check for duplicates
+	Added data init
+	Added disorder calculation
 
 mitavare
 	parsing

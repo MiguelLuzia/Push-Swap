@@ -6,7 +6,7 @@
 /*   By: dboryey <dboryey@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 18:15:13 by dboryey           #+#    #+#             */
-/*   Updated: 2026/11/24 10:59:08 by dboryey          ###   ########.fr       */
+/*   Updated: 2026/11/24 13:56:49 by dboryey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,21 +36,14 @@ t_stack	*new_stack(int n)
 	return (new);
 }
 
-void	add_back(t_stack **stack, t_stack *new)
+void	add_back(t_data *data, int n)
 {
-	t_stack	*end;
+	t_stack	*num;
 
-	if (!stack || !new)
-		return ;
-	if (!(*stack))
-	{
-		*stack = new;
-		return ;
-	}
-	end = *stack;
-	while (end->next)
-		end = end->next;
-	end->next = new;
+	num = new_stack(n);
+	if (!num)
+		exit_error(data);
+	add_back(&data->a, num);
 }
 
 size_t	stack_size(t_stack *stack)
@@ -58,7 +51,7 @@ size_t	stack_size(t_stack *stack)
 	size_t	n;
 
 	n = 0;
-	while (stack->next)
+	while (stack)
 	{
 		stack = stack->next;
 		n++;
