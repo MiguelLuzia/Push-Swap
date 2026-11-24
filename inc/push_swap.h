@@ -6,7 +6,7 @@
 /*   By: dboryey <dboryey@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 14:41:37 by dboryey           #+#    #+#             */
-/*   Updated: 2026/11/23 19:05:58 by dboryey          ###   ########.fr       */
+/*   Updated: 2026/11/24 11:04:33 by dboryey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ typedef struct s_data
 	t_stack		*b; //stack b
 	t_strategy	strategy; //selected strategy
 	int			bench; //--bench mode
-	double		disorder; //disorder coeficient
+	double		disorder; //disorder coeficient, has to be double to be more precise that float.
 	t_stats		stats; //status struct that has the ops_ and the total
 }	t_data;
 
@@ -72,5 +72,8 @@ void	exit_error(t_data *data);
 
 //stack.c
 void	stack_free(t_stack **stack);
+t_stack	*new_stack(int n);
+void	add_back(t_stack **stack, t_stack *new);
+size_t	stack_size(t_stack *stack);
 
 #endif
