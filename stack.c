@@ -6,7 +6,7 @@
 /*   By: dboryey <dboryey@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 18:15:13 by dboryey           #+#    #+#             */
-/*   Updated: 2026/11/24 14:32:49 by dboryey          ###   ########.fr       */
+/*   Updated: 2026/11/25 12:42:17 by dboryey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,9 +64,9 @@ void	add_value(t_data *data, int n)
 	add_back(&data->a, node);
 }
 
-size_t	stack_size(t_stack *stack)
+int	stack_size(t_stack *stack)
 {
-	size_t	n;
+	int	n;
 
 	n = 0;
 	while (stack)

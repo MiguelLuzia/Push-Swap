@@ -6,7 +6,7 @@
 /*   By: dboryey <dboryey@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 14:41:37 by dboryey           #+#    #+#             */
-/*   Updated: 2026/11/24 17:48:42 by dboryey          ###   ########.fr       */
+/*   Updated: 2026/11/25 14:24:59 by dboryey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,12 +91,22 @@ void	stack_free(t_stack **stack);
 t_stack	*new_node(int n);
 void	add_back(t_stack **head, t_stack *node);
 void	add_value(t_data *data, int n);
-size_t	stack_size(t_stack *stack);
+int		stack_size(t_stack *stack);
 
 //stack_find.c
 int		is_sorted(t_stack **stack);
+t_stack	*find_min(t_stack *stack);
+t_stack	*find_max(t_stack *stack);
+int		find_pos(t_stack *stack, t_stack *find);
 
 //parse_flags.c
 void	parse_flags(int ac, char **av, t_data *data);
+
+//rotate_utils
+void	rotate_a_top(t_data *data, t_stack *num);
+void	rotate_b_top(t_data *data, t_stack *num);
+
+//sort_simple
+void	sort_simple(t_data *data);
 
 #endif

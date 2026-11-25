@@ -6,11 +6,61 @@
 /*   By: dboryey <dboryey@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 18:15:07 by dboryey           #+#    #+#             */
-/*   Updated: 2026/11/23 18:48:33 by dboryey          ###   ########.fr       */
+/*   Updated: 2026/11/25 15:04:15 by dboryey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	rotate_a_top(t_data *data, t_stack *num)
+{
+	int	pos;
+	int	size;
+
+	size = stack_size(data->a);
+	pos = find_pos(data->a, num);
+	if (pos <= size / 2)
+	{
+		while (pos > 0)
+		{
+			ra(data);
+			pos--;
+		}
+	}
+	else
+	{
+		while (pos < size)
+		{
+			rra(data);
+			pos++;
+		}
+	}
+}
+
+void	rotate_b_top(t_data *data, t_stack *num)
+{
+	int	pos;
+	int	size;
+
+	size = stack_size(data->b);
+	pos = find_pos(data->b, num);
+	if (pos <= size / 2)
+	{
+		while (pos > 0)
+		{
+			rb(data);
+			pos--;
+		}
+	}
+	else
+	{
+		while (pos < size)
+		{
+			rrb(data);
+			pos++;
+		}
+	}
+}
 
 /* rotate_utils.c */
 /* Shortest-rotation helpers: bring an element to the top of a or b */

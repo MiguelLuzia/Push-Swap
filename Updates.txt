@@ -8,6 +8,9 @@ dboryey
 	Added check for duplicates
 	Added data init
 	Added disorder calculation
+	added simple and medium alrogithms
+	added find min, max, pos for managing the stack
+	added rotation helpers, rotate node to top of A or B.
 
 mitavare
 	parsing
