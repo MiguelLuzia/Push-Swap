@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   data.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mitavare <mitavare@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: dboryey <dboryey@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 18:14:57 by dboryey           #+#    #+#             */
-/*   Updated: 2026/11/26 00:17:36 by mitavare         ###   ########.fr       */
+/*   Updated: 2026/11/26 10:40:43 by dboryey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,3 @@ void	ft_free_split(char **tokens)
 	}
 	free(tokens);
 }
-// migrei o ft_free_split para aqui
-
-/* data.c */
-/* Lifecycle of the t_data struct: data_init, data_free and exit_error. */
-/* exit_error frees all memory, prints "Error" on stderr and exits. */

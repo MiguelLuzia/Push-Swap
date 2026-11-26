@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ops_utils.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mitavare <mitavare@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: dboryey <dboryey@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/25 23:29:43 by mitavare          #+#    #+#             */
-/*   Updated: 2026/11/25 23:36:24 by mitavare         ###   ########.fr       */
+/*   Updated: 2026/11/26 10:41:20 by dboryey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,3 @@ void	emit_op(t_data *data, t_op op, char *name)
 	data->stats.ops[op]++;
 	data->stats.total++;
 }
-/*
-Sobre o porque de ter usado esta função:
-o --bench obriga a mostrar quantas operações sao feitas no total e quantas de cada tipo, esta função serve
-para dar write da operação + fazer essas contagens
-*/

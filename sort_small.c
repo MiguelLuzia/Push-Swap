@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_small.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mitavare <mitavare@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: dboryey <dboryey@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 18:15:11 by dboryey           #+#    #+#             */
-/*   Updated: 2026/11/25 23:53:49 by mitavare         ###   ########.fr       */
+/*   Updated: 2026/11/26 10:42:58 by dboryey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,3 @@ int	sort_small(t_data *data)
 		pa(data);
 	return (1);
 }
-
-/* sort_small.c */
-/* Hardcoded sorting for tiny stacks (2, 3 and 5 elements) */
-/* using the fewest possible operations. */

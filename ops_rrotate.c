@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ops_rrotate.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mitavare <mitavare@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: dboryey <dboryey@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 14:41:57 by dboryey           #+#    #+#             */
-/*   Updated: 2026/11/25 23:33:40 by mitavare         ###   ########.fr       */
+/*   Updated: 2026/11/26 10:41:07 by dboryey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,3 @@ void	rrr(t_data *data)
 	if (rrotated_a || rrotated_b)
 		emit_op(data, OP_RRR, "rrr\n");
 }
-
-/* ops_rrotate.c */
-/* Reverse rotate operations rra, rrb and rrr. The last node becomes the top one, */
-/* then the operation is printed and counted. */

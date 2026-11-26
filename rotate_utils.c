@@ -6,7 +6,7 @@
 /*   By: dboryey <dboryey@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 18:15:07 by dboryey           #+#    #+#             */
-/*   Updated: 2026/11/25 15:04:15 by dboryey          ###   ########.fr       */
+/*   Updated: 2026/11/26 10:42:35 by dboryey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,3 @@ void	rotate_b_top(t_data *data, t_stack *num)
 		}
 	}
 }
-
-/* rotate_utils.c */
-/* Shortest-rotation helpers: bring an element to the top of a or b */
-/* with ra/rb if it is in the top half, or rra/rrb otherwise. */

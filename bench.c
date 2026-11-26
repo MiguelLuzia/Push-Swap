@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   bench.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mitavare <mitavare@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: dboryey <dboryey@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 18:14:55 by dboryey           #+#    #+#             */
-/*   Updated: 2026/11/25 23:45:43 by mitavare         ###   ########.fr       */
+/*   Updated: 2026/11/26 10:40:33 by dboryey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,3 @@ void	print_bench(t_data *data)
 	ft_putchar_fd('\n', 2);
 	put_counts(&data->stats);
 }
-
-/* bench.c */
-/* Prints the --bench report on stderr: disorder %, strategy name and complexity, */
-/* total operations and the count of each operation type. */

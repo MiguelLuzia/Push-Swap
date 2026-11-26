@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ops_swap.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mitavare <mitavare@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: dboryey <dboryey@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 14:41:58 by dboryey           #+#    #+#             */
-/*   Updated: 2026/11/25 23:34:18 by mitavare         ###   ########.fr       */
+/*   Updated: 2026/11/26 10:41:15 by dboryey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,3 @@ void	ss(t_data *data)
 	if (swapped_a || swapped_b)
 		emit_op(data, OP_SS, "ss\n");
 }
-
-/* stack_find.c */
-/* Read-only stack queries: min, max, position of an element and is_sorted. */

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_find.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mitavare <mitavare@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: dboryey <dboryey@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 18:15:12 by dboryey           #+#    #+#             */
-/*   Updated: 2026/11/26 00:13:54 by mitavare         ###   ########.fr       */
+/*   Updated: 2026/11/26 10:43:05 by dboryey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,8 +67,3 @@ int	find_pos(t_stack *stack, t_stack *find)
 	}
 	return (pos);
 }
-
-// alterei umas coisas aqui e corrigi alguns erros pq o make nao estava a conseguir compilar
-
-/* stack_find.c */
-/* Read-only stack queries: min, max, position of an element and is_sorted. */

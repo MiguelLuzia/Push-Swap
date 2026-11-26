@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_complex.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mitavare <mitavare@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: dboryey <dboryey@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 18:15:09 by dboryey           #+#    #+#             */
-/*   Updated: 2026/11/25 23:39:25 by mitavare         ###   ########.fr       */
+/*   Updated: 2026/11/26 18:01:53 by dboryey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,9 +54,3 @@ void	sort_complex(t_data *data)
 		bit++;
 	}
 }
-
-// espero que a manipulação binaria de agrade Dmytro, se nao fossem os problemas q fiz no leetcode nao saia daqui 😭
-
-/* sort_complex.c */
-/* O(n log n) strategy: radix sort on the ranks, one bit per pass, */
-/* using pb/pa to separate zeros and ones. */

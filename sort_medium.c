@@ -6,7 +6,7 @@
 /*   By: dboryey <dboryey@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 18:15:10 by dboryey           #+#    #+#             */
-/*   Updated: 2026/11/25 14:43:48 by dboryey          ###   ########.fr       */
+/*   Updated: 2026/11/26 10:42:50 by dboryey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,3 @@ void	sort_medium(t_data *data)
 		pa(data);
 	}
 }
-
-/* sort_medium.c */
-/* O(n * sqrt(n)) strategy: split ranks into about sqrt(n) chunks, */
-/* push them to b chunk by chunk, then bring everything back to a. */

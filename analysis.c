@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   analysis.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mitavare <mitavare@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: dboryey <dboryey@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 18:14:55 by dboryey           #+#    #+#             */
-/*   Updated: 2026/11/26 00:15:48 by mitavare         ###   ########.fr       */
+/*   Updated: 2026/11/26 10:58:31 by dboryey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ double	calc_disorder(t_stack *stack)
 {
 	long		mistake;
 	long		t_pairs;
-	t_stack	*current;
+	t_stack		*current;
 
 	mistake = 0;
 	t_pairs = 0;
@@ -58,9 +58,3 @@ void	assign_index(t_stack *stack)
 		current = current->next;
 	}
 }
-
-// alterações muito pequenas, so para corrigir uns erros de compilação do make
-
-/* analysis.c */
-/* Pre-sort analysis: compute_disorder (mistaken pairs / total pairs) */
-/* and the rank indexing that replaces each value by its position in sorted order. */

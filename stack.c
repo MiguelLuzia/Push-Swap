@@ -6,7 +6,7 @@
 /*   By: dboryey <dboryey@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 18:15:13 by dboryey           #+#    #+#             */
-/*   Updated: 2026/11/25 12:42:17 by dboryey          ###   ########.fr       */
+/*   Updated: 2026/11/26 10:43:13 by dboryey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,3 @@ int	stack_size(t_stack *stack)
 	}
 	return (n);
 }
-
-/* stack.c */
-/* Basic linked-list functions for t_stack: create a node, add to the back, */
-/* get the size and free the whole stack. */

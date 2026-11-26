@@ -6,7 +6,7 @@
 /*   By: dboryey <dboryey@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 14:42:02 by dboryey           #+#    #+#             */
-/*   Updated: 2026/11/24 17:17:13 by dboryey          ###   ########.fr       */
+/*   Updated: 2026/11/26 10:40:50 by dboryey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,3 @@ int	main(int ac, char **av)
 	data_free(data);
 	return (0);
 }
-
-/* main.c */
-/* Entry point. Parses flags and numbers, computes disorder, picks the strategy, */
-/* runs the sort, prints the bench report if asked, then frees everything. */

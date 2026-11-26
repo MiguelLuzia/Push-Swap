@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ops_push.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mitavare <mitavare@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: dboryey <dboryey@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 14:41:56 by dboryey           #+#    #+#             */
-/*   Updated: 2026/11/25 23:32:19 by mitavare         ###   ########.fr       */
+/*   Updated: 2026/11/26 10:40:58 by dboryey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,3 @@ void	pb(t_data *data)
 	if (push_top(&data->b, &data->a))
 		emit_op(data, OP_PB, "pb\n");
 }
-
-/* ops_push.c */
-/* Push operations pa and pb. Moves the top node from one stack to the other, */
-/* prints the operation and counts it. */

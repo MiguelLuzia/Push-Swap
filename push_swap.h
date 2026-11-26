@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mitavare <mitavare@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: dboryey <dboryey@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 14:41:37 by dboryey           #+#    #+#             */
-/*   Updated: 2026/11/26 00:17:52 by mitavare         ###   ########.fr       */
+/*   Updated: 2026/11/26 11:05:18 by dboryey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,18 +20,18 @@
 
 typedef struct s_stack
 {
-	int				value; //the number itself in stack
-	int				index; //index of the number in stack
-	struct s_stack	*next; //pointer to the next number in stack
+	int				value;
+	int				index;
+	struct s_stack	*next;
 }	t_stack;
 
 typedef enum s_strategy
 {
-	STRAT_NONE = 0, //STRAT_NONE is for selecting adaptive sorting
-	STRAT_SIMPLE, //For *0.00 < disorder < 0.20*
-	STRAT_MEDIUM, //For *0.20 <= disorder < 0.50*
-	STRAT_COMPLEX, //For *0.50 <= disorder <= 1.00*
-	STRAT_ADAPTIVE, //For when no strategy selected
+	STRAT_NONE = 0,
+	STRAT_SIMPLE,
+	STRAT_MEDIUM,
+	STRAT_COMPLEX,
+	STRAT_ADAPTIVE,
 }	t_strategy;
 
 typedef enum s_op
@@ -51,18 +51,18 @@ typedef enum s_op
 
 typedef struct s_stats
 {
-	size_t	ops[11]; //All of the 11 operations from ops_
-	size_t	total; //total of operations
+	size_t	ops[11];
+	size_t	total;
 }	t_stats;
 
 typedef struct s_data
 {
-	t_stack		*a; //stack a
-	t_stack		*b; //stack b
-	t_strategy	strategy; //selected strategy
-	int			bench; //--bench mode
-	double		disorder; //disorder coeficient, has to be double to be more precise that float.
-	t_stats		stats; //status struct that has the ops_ and the total
+	t_stack		*a;
+	t_stack		*b;
+	t_strategy	strategy;
+	int			bench;
+	double		disorder;
+	t_stats		stats;
 }	t_data;
 
 //analysis.c
@@ -96,7 +96,6 @@ void	check_dup(t_data *data);
 int		has_value(t_stack *stack, int value);
 
 //parsing.c
-void	ft_free_split(char **tokens);
 int		parse_args(int ac, char **av, t_stack **a);
 
 //data.c

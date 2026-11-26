@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_adaptive.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mitavare <mitavare@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: dboryey <dboryey@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 18:15:09 by dboryey           #+#    #+#             */
-/*   Updated: 2026/11/25 23:42:10 by mitavare         ###   ########.fr       */
+/*   Updated: 2026/11/26 10:42:39 by dboryey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,3 @@ void	sort_adaptive(t_data *data)
 	else
 		sort_complex(data);
 }
-
-/* sort_adaptive.c */
-/* Adaptive strategy: picks the simple, medium or complex method */
-/* from the measured disorder (< 0.2, < 0.5, otherwise). */

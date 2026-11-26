@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ops_rotate.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mitavare <mitavare@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: dboryey <dboryey@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 14:41:56 by dboryey           #+#    #+#             */
-/*   Updated: 2026/11/25 23:33:06 by mitavare         ###   ########.fr       */
+/*   Updated: 2026/11/26 10:41:02 by dboryey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,3 @@ void	rr(t_data *data)
 	if (rotated_a || rotated_b)
 		emit_op(data, OP_RR, "rr\n");
 }
-
-/* ops_rotate.c */
-/* Rotate operations ra, rb and rr. The top node becomes the last one, */
-/* then the operation is printed and counted. */

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_simple.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mitavare <mitavare@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: dboryey <dboryey@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 18:15:11 by dboryey           #+#    #+#             */
-/*   Updated: 2026/11/25 23:28:42 by mitavare         ###   ########.fr       */
+/*   Updated: 2026/11/26 10:42:54 by dboryey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,3 @@ void	sort_simple(t_data *data)
 	while (data->b)
 		pa(data);
 }
-
-/* sort_simple.c */
-/* O(n^2) strategy selection sort: repeatedly find the minimum, rotate it to the top, */
-/* push it to b, then push everything back to a. */

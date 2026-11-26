@@ -6,7 +6,7 @@
 /*   By: dboryey <dboryey@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 18:14:56 by dboryey           #+#    #+#             */
-/*   Updated: 2026/11/24 17:39:59 by dboryey          ###   ########.fr       */
+/*   Updated: 2026/11/26 10:40:38 by dboryey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,3 @@ int	has_value(t_stack *stack, int value)
 	}
 	return (0);
 }
-
-/* checks.c */
-/* Input validation: is the string a valid number, does it fit in an int, */
-/* and is there a duplicate in the stack. */
