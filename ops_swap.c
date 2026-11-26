@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ops_swap.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dboryey <dboryey@student.42lisboa.com>     +#+  +:+       +#+        */
+/*   By: mitavare <mitavare@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 14:41:58 by dboryey           #+#    #+#             */
-/*   Updated: 2026/11/23 18:46:52 by dboryey          ###   ########.fr       */
+/*   Updated: 2026/11/25 23:34:18 by mitavare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,13 @@ static int	swap_top(t_stack **stack)
 void	sa(t_data *data)
 {
 	if (swap_top(&data->a))
-		write(1, "sa\n", 3);
+		emit_op(data, OP_SA, "sa\n");
 }
 
 void	sb(t_data *data)
 {
 	if (swap_top(&data->b))
-		write(1, "sb\n", 3);
+		emit_op(data, OP_SB, "sb\n");
 }
 
 void	ss(t_data *data)
@@ -47,7 +47,7 @@ void	ss(t_data *data)
 	swapped_a = swap_top(&data->a);
 	swapped_b = swap_top(&data->b);
 	if (swapped_a || swapped_b)
-		write(1, "ss\n", 3);
+		emit_op(data, OP_SS, "ss\n");
 }
 
 /* stack_find.c */

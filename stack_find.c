@@ -3,20 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   stack_find.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dboryey <dboryey@student.42lisboa.com>     +#+  +:+       +#+        */
+/*   By: mitavare <mitavare@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 18:15:12 by dboryey           #+#    #+#             */
-/*   Updated: 2026/11/25 13:14:13 by dboryey          ###   ########.fr       */
+/*   Updated: 2026/11/26 00:13:54 by mitavare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	is_sorted(t_stack **stack)
+int	is_sorted(t_stack *stack)
 {
-	if (calc_disorder(stack) == 0)
-		return (1);
-	return (0);
+	while (stack && stack->next)
+	{
+		if (stack->value > stack->next->value)
+			return (0);
+		stack = stack->next;
+	}
+	return (1);
 }
 
 t_stack	*find_min(t_stack *stack)
@@ -29,13 +33,13 @@ t_stack	*find_min(t_stack *stack)
 	while (stack)
 	{
 		if (stack->index < min->index)
-			min->index = stack->index;
+			min = stack;
 		stack = stack->next;
 	}
 	return (min);
 }
 
-void	find_max(t_stack *stack)
+t_stack	*find_max(t_stack *stack)
 {
 	t_stack	*max;
 
@@ -45,7 +49,7 @@ void	find_max(t_stack *stack)
 	while (stack)
 	{
 		if (stack->index > max->index)
-			max->index = stack->index;
+			max = stack;
 		stack = stack->next;
 	}
 	return (max);
@@ -63,6 +67,8 @@ int	find_pos(t_stack *stack, t_stack *find)
 	}
 	return (pos);
 }
+
+// alterei umas coisas aqui e corrigi alguns erros pq o make nao estava a conseguir compilar
 
 /* stack_find.c */
 /* Read-only stack queries: min, max, position of an element and is_sorted. */

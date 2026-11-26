@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ops_rrotate.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dboryey <dboryey@student.42lisboa.com>     +#+  +:+       +#+        */
+/*   By: mitavare <mitavare@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 14:41:57 by dboryey           #+#    #+#             */
-/*   Updated: 2026/11/23 18:47:38 by dboryey          ###   ########.fr       */
+/*   Updated: 2026/11/25 23:33:40 by mitavare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,13 @@ static int	rrotate(t_stack **stack)
 void	rra(t_data *data)
 {
 	if (rrotate(&data->a))
-		write(1, "rra\n", 4);
+		emit_op(data, OP_RRA, "rra\n");
 }
 
 void	rrb(t_data *data)
 {
 	if (rrotate(&data->b))
-		write(1, "rrb\n", 4);
+		emit_op(data, OP_RRB, "rrb\n");
 }
 
 void	rrr(t_data *data)
@@ -52,7 +52,7 @@ void	rrr(t_data *data)
 	rrotated_a = rrotate(&data->a);
 	rrotated_b = rrotate(&data->b);
 	if (rrotated_a || rrotated_b)
-		write(1, "rrr\n", 4);
+		emit_op(data, OP_RRR, "rrr\n");
 }
 
 /* ops_rrotate.c */

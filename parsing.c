@@ -3,33 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dboryey <dboryey@student.42lisboa.com>     +#+  +:+       +#+        */
+/*   By: mitavare <mitavare@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 18:14:57 by dboryey           #+#    #+#             */
-/*   Updated: 2026/11/24 15:37:31 by dboryey          ###   ########.fr       */
+/*   Updated: 2026/11/26 00:17:14 by mitavare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-/* parse_args.c */
-/* Converts the remaining arguments (including "1 2 3" strings) into the nodes of stack a. */
-/* Calls the checks and exits with an error on any invalid input. */
-
-void	ft_free_split(char **tokens)
-{
-	int	i;
-
-	if (!tokens)
-		return ;
-	i = 0;
-	while (tokens[i])
-	{
-		free(tokens[i]);
-		i++;
-	}
-	free(tokens);
-}
 
 static int	is_flag(const char *s)
 {
@@ -75,7 +56,7 @@ static int	add_token(t_stack **a, const char *token)
 
 	if (!parse_int(token, &value) || has_value(*a, value))
 		return (0);
-	node = new_stack(value);
+	node = new_node(value);
 	if (!node)
 		return (0);
 	add_back(a, node);
@@ -106,7 +87,7 @@ int	parse_args(int ac, char **av, t_stack **a)
 {
 	int	i;
 
-	i = 1; //acho q deve comecar em 1, porque logo a seguir tu verificas o ac[0], o nome do executavel.
+	i = 1;
 	*a = NULL;
 	while (i < ac)
 	{

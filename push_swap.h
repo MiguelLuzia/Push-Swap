@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dboryey <dboryey@student.42lisboa.com>     +#+  +:+       +#+        */
+/*   By: mitavare <mitavare@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 14:41:37 by dboryey           #+#    #+#             */
-/*   Updated: 2026/11/25 14:24:59 by dboryey          ###   ########.fr       */
+/*   Updated: 2026/11/26 00:17:52 by mitavare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <limits.h>
-# include "libft.h"
+# include "libft/libft.h"
 
 typedef struct s_stack
 {
@@ -33,6 +33,21 @@ typedef enum s_strategy
 	STRAT_COMPLEX, //For *0.50 <= disorder <= 1.00*
 	STRAT_ADAPTIVE, //For when no strategy selected
 }	t_strategy;
+
+typedef enum s_op
+{
+	OP_SA = 0,
+	OP_SB,
+	OP_SS,
+	OP_PA,
+	OP_PB,
+	OP_RA,
+	OP_RB,
+	OP_RR,
+	OP_RRA,
+	OP_RRB,
+	OP_RRR
+}	t_op;
 
 typedef struct s_stats
 {
@@ -52,7 +67,10 @@ typedef struct s_data
 
 //analysis.c
 double	calc_disorder(t_stack *stack);
-void	assign_index(t_stack **stack);
+void	assign_index(t_stack *stack);
+
+// ops_utils.c
+void	emit_op(t_data *data, t_op op, char *name);
 
 //ops_swap.c
 void	sa(t_data *data);
@@ -85,6 +103,7 @@ int		parse_args(int ac, char **av, t_stack **a);
 void	data_init(t_data *data);
 void	data_free(t_data *data);
 void	exit_error(t_data *data);
+void	ft_free_split(char **tokens);
 
 //stack.c
 void	stack_free(t_stack **stack);
@@ -94,7 +113,7 @@ void	add_value(t_data *data, int n);
 int		stack_size(t_stack *stack);
 
 //stack_find.c
-int		is_sorted(t_stack **stack);
+int		is_sorted(t_stack *stack);
 t_stack	*find_min(t_stack *stack);
 t_stack	*find_max(t_stack *stack);
 int		find_pos(t_stack *stack, t_stack *find);
@@ -104,9 +123,26 @@ void	parse_flags(int ac, char **av, t_data *data);
 
 //rotate_utils
 void	rotate_a_top(t_data *data, t_stack *num);
+
 void	rotate_b_top(t_data *data, t_stack *num);
 
 //sort_simple
 void	sort_simple(t_data *data);
+
+//sort_medium.c
+void	sort_medium(t_data *data);
+
+//sort_complex.c
+void	sort_complex(t_data *data);
+
+//sort_adaptive.c
+int		pick_method(double disorder);
+void	sort_adaptive(t_data *data);
+
+//sort_small.c
+int		sort_small(t_data *data);
+
+//bench.c
+void	print_bench(t_data *data);
 
 #endif

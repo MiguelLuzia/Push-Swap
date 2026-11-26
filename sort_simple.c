@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_simple.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dboryey <dboryey@student.42lisboa.com>     +#+  +:+       +#+        */
+/*   By: mitavare <mitavare@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 18:15:11 by dboryey           #+#    #+#             */
-/*   Updated: 2026/11/25 13:09:27 by dboryey          ###   ########.fr       */
+/*   Updated: 2026/11/25 23:28:42 by mitavare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	sort_simple(t_data *data)
 {
 	t_stack	*min;
-	
+
 	min = find_min(data->a);
 	while (min)
 	{

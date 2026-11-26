@@ -14,3 +14,9 @@ dboryey
 
 mitavare
 	parsing
+	makefile
+	cleaning
+	fortnite token farming + math study
+	small, complex, adaptive sorts (fiz os mais dificeis broo)
+	bench 💀
+	error handling + correcting + compiling
