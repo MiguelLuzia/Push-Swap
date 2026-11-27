@@ -6,7 +6,7 @@
 /*   By: dboryey <dboryey@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 14:41:37 by dboryey           #+#    #+#             */
-/*   Updated: 2026/11/26 11:05:18 by dboryey          ###   ########.fr       */
+/*   Updated: 2026/11/27 13:38:42 by dboryey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,7 +108,6 @@ void	ft_free_split(char **tokens);
 void	stack_free(t_stack **stack);
 t_stack	*new_node(int n);
 void	add_back(t_stack **head, t_stack *node);
-void	add_value(t_data *data, int n);
 int		stack_size(t_stack *stack);
 
 //stack_find.c

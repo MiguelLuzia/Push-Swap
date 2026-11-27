@@ -6,7 +6,7 @@
 /*   By: dboryey <dboryey@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 18:15:13 by dboryey           #+#    #+#             */
-/*   Updated: 2026/11/26 10:43:13 by dboryey          ###   ########.fr       */
+/*   Updated: 2026/11/27 13:37:14 by dboryey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,16 +52,6 @@ void	add_back(t_stack **stack, t_stack *node)
 	while (last->next)
 		last = last->next;
 	last->next = node;
-}
-
-void	add_value(t_data *data, int n)
-{
-	t_stack	*node;
-
-	node = new_node(n);
-	if (!node)
-		exit_error(data);
-	add_back(&data->a, node);
 }
 
 int	stack_size(t_stack *stack)
